@@ -21,5 +21,7 @@ cd ../build/docker/prod
 # docker tag ${REGISTRY}/boxboat/boxboat-blog-ui-ssr:${TAG} ${REGISTRY}/boxboat/boxboat-blog-ui-ssr:latest
 # docker push
 
+docker ps -a
+
 docker tag http-echo ${REGISTRY}/jenkins-demo-node
 docker push ${REGISTRY}/jenkins-demo-node
