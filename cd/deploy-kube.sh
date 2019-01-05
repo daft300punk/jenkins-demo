@@ -9,4 +9,4 @@ export REGISTRY=$2
 export TAG=$3
 
 kubectl set image deployment/boxboat-blog-$DEVENV \
-    hashicorp/http-echo=$REGISTRY/jenkins-demo-node
+    http-echo=$REGISTRY/jenkins-demo-node
