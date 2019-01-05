@@ -1,3 +1,3 @@
-FROM google/nodejs-runtime
+FROM launcher.gcr.io/google/nodejs
 
 RUN ["npm", "start"]
