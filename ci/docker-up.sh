@@ -10,7 +10,7 @@ mkdir -p $HOME/.nuget
 # 	docker network create db
 # fi
 
-# docker-compose -f docker-compose.yml -f ci/compose-dev-db.yml -p dev up -d --build
+docker-compose -f docker-compose.yml -p dev up -d --build
 docker-compose -p dev logs -f &
 pid=$!
 
