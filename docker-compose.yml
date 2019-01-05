@@ -5,6 +5,7 @@ services:
     image: google/nodejs-hello
     command: npm start
     container_name: nodejs-hello
+    ports:
       - "8080:8080"
   # db:
   #   image: mysql:5.7.17
