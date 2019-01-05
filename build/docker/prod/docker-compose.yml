@@ -3,7 +3,7 @@ version: "3.1"
 services:
   node-server:
     build: hashicorp/http-echo
-    container_name: http-echo
+    container_name: http-echo1
     environment:
       - DEVENV=${DEVENV}
     ports:

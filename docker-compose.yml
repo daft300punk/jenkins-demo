@@ -3,7 +3,10 @@ version: "3.1"
 services:
   http-echo:
     image: hashicorp/http-echo
-    container_name: http-echo
+    container_name: http-echo2
+    command:
+      - -listen=:8080
+      - -text=hello"
     ports:
       - "8080:8080"
   # db:
