@@ -7,7 +7,7 @@ services:
     environment:
       - DEVENV=${DEVENV}
     ports:
-      "8080:8080"
+      - "8080:8080"
 
   # dotnet:
   #   build: ./dotnet
