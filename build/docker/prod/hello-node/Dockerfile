@@ -1,3 +1,3 @@
 FROM google/nodejs-runtime
 
-RUN [""]
+RUN ["npm", "start"]

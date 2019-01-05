@@ -2,7 +2,8 @@ version: "3.1"
 
 services:
   node-server:
-    image: "google/nodejs-runtime"
+    build: ./hello-node
+    container_name: "nodejs-hello"
     environment:
       - DEVENV=${DEVENV}
     ports:
