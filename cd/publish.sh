@@ -8,5 +8,5 @@ set -e
 # version=$(date +%Y%m%d%H%M)
 
 ./images-build.sh $@
-./images-test.sh $@
+# ./images-test.sh $@
 ./images-push.sh $@

@@ -1,27 +1,34 @@
 version: "3.1"
 
 services:
-  dotnet:
-    build: ./dotnet
-    image: "${REGISTRY}/boxboat/boxboat-blog-dotnet:${TAG}"
+  node-server:
+    build: ./hello-node
     environment:
       - DEVENV=${DEVENV}
-
-  ui-ssr:
-    build: ./ui-ssr
-    image: "${REGISTRY}/boxboat/boxboat-blog-ui-ssr:${TAG}"
-    environment:
-      - DEVENV=${DEVENV}
-    depends_on:
-      - dotnet
-
-  nginx:
-    build: ./nginx
-    image: "${REGISTRY}/boxboat/boxboat-blog-nginx:${TAG}"
-    environment:
-      - DEVENV=${DEVENV}
-    depends_on:
-      - dotnet
-      - ui-ssr
     ports:
-      - "80:8000"
+      "8080:8080"
+
+  # dotnet:
+  #   build: ./dotnet
+  #   image: "${REGISTRY}/boxboat/boxboat-blog-dotnet:${TAG}"
+  #   environment:
+  #     - DEVENV=${DEVENV}
+
+  # ui-ssr:
+  #   build: ./ui-ssr
+  #   image: "${REGISTRY}/boxboat/boxboat-blog-ui-ssr:${TAG}"
+  #   environment:
+  #     - DEVENV=${DEVENV}
+  #   depends_on:
+  #     - dotnet
+
+  # nginx:
+  #   build: ./nginx
+  #   image: "${REGISTRY}/boxboat/boxboat-blog-nginx:${TAG}"
+  #   environment:
+  #     - DEVENV=${DEVENV}
+  #   depends_on:
+  #     - dotnet
+  #     - ui-ssr
+  #   ports:
+  #     - "80:8000"

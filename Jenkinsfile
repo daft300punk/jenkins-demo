@@ -9,25 +9,25 @@ throttle(['throttleDocker']) {
             ./ci/docker-up.sh
           '''
         }
-        stage('Test'){
-          parallel (
-            "unit": {
-              sh '''
-                ./ci/test/unit.sh
-              '''
-            },
-            "functional": {
-              sh '''
-                ./ci/test/functional.sh
-              '''
-            }
-          )
-        }
-        stage('Capacity Test') {
-          sh '''
-            ./ci/test/stress.sh
-          '''
-        }
+        // stage('Test'){
+        //   parallel (
+        //     "unit": {
+        //       sh '''
+        //         ./ci/test/unit.sh
+        //       '''
+        //     },
+        //     "functional": {
+        //       sh '''
+        //         ./ci/test/functional.sh
+        //       '''
+        //     }
+        //   )
+        // }
+        // stage('Capacity Test') {
+        //   sh '''
+        //     ./ci/test/stress.sh
+        //   '''
+        // }
         stage('Deploy to Kubernetes') {
           sh '''
             version=$(date +%Y%m%d%H%M)
