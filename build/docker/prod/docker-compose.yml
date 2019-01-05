@@ -4,6 +4,9 @@ services:
   http-echo:
     image: hashicorp/http-echo
     container_name: http-echo
+    command:
+      - -listen=:8080
+      - -text=hello"
     environment:
       - DEVENV=${DEVENV}
     ports:
