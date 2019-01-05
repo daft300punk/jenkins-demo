@@ -1,9 +1,9 @@
 version: "3.1"
 
 services:
-  node-server:
+  http-echo:
     image: hashicorp/http-echo
-    container_name: http-echo1
+    container_name: http-echo
     environment:
       - DEVENV=${DEVENV}
     ports:
