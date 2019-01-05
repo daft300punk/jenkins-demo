@@ -3,6 +3,7 @@ version: "3.1"
 services:
   node-server:
     image: google/nodejs-hello
+    command: npm start
     container_name: nodejs-hello
       - "8080:8080"
   # db:
