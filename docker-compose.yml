@@ -3,7 +3,7 @@ version: "3.1"
 services:
   node-server:
     image: google/nodejs-hello
-    command: npm start
+    command:   docker run -p 8080 google/nodejs-hello
     container_name: nodejs-hello
     ports:
       - "8080:8080"
