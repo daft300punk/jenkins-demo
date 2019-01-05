@@ -2,11 +2,11 @@ version: "3.1"
 
 services:
   http-echo:
-    image: hashicorp/http-echo
-    container_name: http-echo
+    image: ummiyah/jenkins-demo-node
+    container_name: http-echo1
     command:
       - -listen=:8080
-      - -text=hello"
+      - -text=hello
     ports:
       - "8080:8080"
   # db:
