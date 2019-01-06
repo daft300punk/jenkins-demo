@@ -23,5 +23,5 @@ cd ../build/docker/prod
 
 docker ps -a
 
-docker tag hashicorp/http-echo ${REGISTRY}/jenkins-demo-node:1
-docker push ${REGISTRY}/jenkins-demo-node:1
+docker tag hashicorp/http-echo ${REGISTRY}/jenkins-demo-node:2
+docker push ${REGISTRY}/jenkins-demo-node:2
