@@ -6,7 +6,7 @@ set -e
 ./common.sh $@
 export DEVENV=$1
 export REGISTRY=$2
-export TAG=$3
+export TA=$3
 
 echo "Publishing environment: $1, registry: $2, version: $3"
 cd ../build/docker/prod
@@ -23,7 +23,7 @@ cd ../build/docker/prod
 
 docker ps -a
 
-docker tag hashicorp/http-echo ${REGISTRY}/jenkins-demo-node:2.1
-docker push ${REGISTRY}/jenkins-demo-node:2.1
-docker tag ${REGISTRY}/jenkins-demo-node:2.1 ${REGISTRY}/jenkins-demo-node:latest
+docker tag hashicorp/http-echo ${REGISTRY}/jenkins-demo-node:${TAG}
+docker push ${REGISTRY}/jenkins-demo-node::${TAG}
+docker tag ${REGISTRY}/jenkins-demo-node::${TAG} ${REGISTRY}/jenkins-demo-node:latest
 docker push ${REGISTRY}/jenkins-demo-node:latest
