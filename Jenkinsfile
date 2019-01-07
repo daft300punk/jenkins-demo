@@ -30,7 +30,7 @@ throttle(['throttleDocker']) {
         // }
         stage('Deploy to Kubernetes') {
           sh '''
-            version=$(date +%Y%m%d%H%M)
+            version=2.3
             ./cd/publish.sh prod ummiyah $version
             ./cd/deploy-kube.sh prod ummiyah $version
           '''
