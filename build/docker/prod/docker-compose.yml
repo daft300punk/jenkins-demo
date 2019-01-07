@@ -6,7 +6,7 @@ services:
     container_name: http-echo
     command:
       - -listen=:8080
-      - -text=hello"
+      - -text=hello1
     environment:
       - DEVENV=${DEVENV}
     ports:

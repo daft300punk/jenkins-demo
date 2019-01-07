@@ -6,7 +6,7 @@ services:
     container_name: http-echo1
     command:
       - -listen=:8080
-      - -text=hello
+      - -text=hello1
     ports:
       - "8080:8080"
   # db:
