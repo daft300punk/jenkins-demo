@@ -6,7 +6,7 @@ set -e
 ./common.sh $@
 export DEVENV=$1
 export REGISTRY=$2
-export TA=$3
+export TAG=$3
 
 echo "Publishing environment: $1, registry: $2, version: $3"
 cd ../build/docker/prod
