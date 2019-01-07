@@ -32,7 +32,7 @@ throttle(['throttleDocker']) {
           sh '''
             version=2.4
             ./cd/publish.sh prod ummiyah $version
-            ./cd/deploy-kube.sh prod ummiyah $versio
+            ./cd/deploy-kube.sh prod ummiyah $version
           '''
         }
       }
